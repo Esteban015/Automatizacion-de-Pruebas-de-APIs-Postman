@@ -1,0 +1,2173 @@
+{
+	"info": {
+		"_postman_id": "ba9d4eb2-02f4-4f6e-9ac8-6fe327b02c40",
+		"name": "ALS-WM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "index",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/client",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "options",
+					"request": {
+						"method": "OPTIONS",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/client",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/client/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"client",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client_name\": \"Municipio de Naderberg\",\r\n    \"street\": \"Joana Ramp\",\r\n    \"street_number\": \"332\",\r\n    \"city\": \"North Lessieside\",\r\n    \"state\": \"Alaska\",\r\n    \"country\": \"Barbados\",\r\n    \"phone\": \"740-852-7209 x974\",\r\n    \"name\": \"Example Name\",\r\n    \"email\": \"example@email.com\",\r\n    \"language\" : \"es\",\r\n    \"password\" : \"examplePass\",\r\n    \"role_id\" : 2,\r\n    \"created_by\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/client",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client_name\": \"Municipio de Naderberg\",\r\n    \"street\": \"Joana Ramp\",\r\n    \"street_number\": \"332\",\r\n    \"city\": \"North Lessieside\",\r\n    \"state\": \"Alaska\",\r\n    \"country\": \"Barbados\",\r\n    \"phone\": \"740-852-7209 x974\",\r\n    \"user_id\" : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/client/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"client",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Zone",
+			"item": [
+				{
+					"name": "index",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/zone",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"zone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "options",
+					"request": {
+						"method": "OPTIONS",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/zone",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"zone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/zone/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"zone",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"example name\",\r\n    \"shape\" : \"[{\\\"lat\\\":-34.57755,\\\"lng\\\":-58.45512},{\\\"lat\\\":-34.57812,\\\"lng\\\":-58.36499},{\\\"lat\\\":-34.61916,\\\"lng\\\":-58.36553},{\\\"lat\\\":-34.61811,\\\"lng\\\":-58.45477}]\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/zone",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"zone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"new example name\",\r\n    \"shape\" : \"[{\\\"lat\\\":-34.57755,\\\"lng\\\":-58.45512},{\\\"lat\\\":-34.57812,\\\"lng\\\":-58.36499},{\\\"lat\\\":-34.61916,\\\"lng\\\":-58.36553},{\\\"lat\\\":-34.61811,\\\"lng\\\":-58.45477}]\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/zone/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"zone",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Site",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/site",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"site"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "options",
+					"request": {
+						"method": "OPTIONS",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/site",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"site"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/site/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"site",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Sitio N°2602\",\r\n    \"description\": \"Diagonal\",\r\n    \"address\": \"VARELA AV. 2991\",\r\n    \"latitude\": \"-34.65750911\",\r\n    \"longitude\": \"-58.43639226\",\r\n    \"last_pickup\": null,\r\n    \"site_category_id\": 28,\r\n    \"load_side_category_id\": 17,\r\n    \"waste_type_id\": 1,\r\n    \"zone_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/site",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"site"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Sitio N°2602\",\r\n    \"description\": \"Diagonal\",\r\n    \"address\": \"VARELA AV. 2991\",\r\n    \"latitude\": \"-34.65750911\",\r\n    \"longitude\": \"-58.43639226\",\r\n    \"last_pickup\": null,\r\n    \"site_category_id\": 28,\r\n    \"load_side_category_id\": 17,\r\n    \"waste_type_id\": 1,\r\n    \"zone_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/site/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"site",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Container",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/container",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"container"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "options",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "OPTIONS",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/container",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"container"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/container/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"container",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serie_id\": \"4532209996127722\",    \r\n    \"address\": \"6465 Rohan Key Suite 873\",\r\n    \"description\": \"Container Media Manzana\",\r\n    \"current_level\": 100,\r\n    \"container_type_id\": 3,\r\n    \"site_id\": 27\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/container",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"container"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serie_id\": \"4532209996127722\",    \r\n    \"address\": \"6465 Rohan Key Suite 873\",\r\n    \"description\": \"Container Media Manzana\",\r\n    \"current_level\": 100,\r\n    \"container_type_id\": 3,\r\n    \"site_id\": 27\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/container/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"container",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Container Type",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/containertype",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"containertype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "options",
+					"request": {
+						"method": "OPTIONS",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/containertype",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"containertype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/containertype/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"containertype",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Container yellow\",\r\n    \"description\": \"Producido por Ledner, Fay and Ferry\",\r\n    \"height\": 170,\r\n    \"volume\": 2,\r\n    \"load_side_category_id\": 17\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/containertype",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"containertype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Container yellow\",\r\n    \"description\": \"Producido por Ledner, Fay and Ferry\",\r\n    \"height\": 170,\r\n    \"volume\": 2,\r\n    \"load_side_category_id\": 17\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/containertype/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"containertype",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Device",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/device",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"device"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "options",
+					"request": {
+						"method": "OPTIONS",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/device",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"device"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/device/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"device",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"DEVICE N°001-4764\",\r\n    \"serial_id\": \"4929832292244296\",\r\n    \"imei\": \"550059683149215\",\r\n    \"device_category_id\": 33,\r\n    \"container_id\": 1,\r\n    \"device_model_id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/device",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"device"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"DEVICE N°001-4764\",\r\n    \"serial_id\": \"4929832292244296\",\r\n    \"imei\": \"550059683149215\",\r\n    \"device_category_id\": 33,\r\n    \"container_id\": 1,\r\n    \"device_model_id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/device/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"device",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Device Model",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/devicemodel",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"devicemodel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "options",
+					"request": {
+						"method": "OPTIONS",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/devicemodel",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"devicemodel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/devicemodel/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"devicemodel",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Example Name\",\r\n    \"serial_id\": \"ALS N°001-2638\",\r\n    \"device_category_id\": 33,\r\n    \"container_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/devicemodel",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"devicemodel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Example Name\",\r\n    \"serial_id\": \"ALS N°001-2638\",\r\n    \"device_category_id\": 33,\r\n    \"container_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/devicemodel/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"devicemodel",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Provider",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/provider",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"provider"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "options",
+					"request": {
+						"method": "OPTIONS",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/provider",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"provider"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/provider/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"provider",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"provider_name\": \"Collins, Doyle and Lebsack\",\r\n    \"phone\": \"687-808-4172 x9176\",\r\n    \"name\": \"Collins, Doyle and Lebsack\",\r\n    \"email\": \"brohan@example.org\",\r\n    \"password\": \"examplePass\",\r\n    \"language\": \"es\",\r\n    \"role_id\": 3,\r\n    \"address\": \"Example Adress 158\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/provider",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"provider"
+							],
+							"query": [
+								{
+									"key": "provider_name",
+									"value": "fran",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"provider_name\": \"Example Name\",\r\n    \"phone\": \"291 4133355\",\r\n    \"user_id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/provider/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"provider",
+								":id"
+							],
+							"query": [
+								{
+									"key": "provider_name",
+									"value": "fran",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/employee",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "options",
+					"request": {
+						"method": "OPTIONS",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/employee",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/employee/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employee",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employee_name\": \"Collins, Doyle and Lebsack\",\r\n    \"phone\": \"687-808-4172 x9176\",\r\n    \"name\": \"Collins, Doyle and Lebsack\",\r\n    \"email\": \"brohan@example.org\",\r\n    \"password\": \"examplePass\",\r\n    \"language\": \"es\",\r\n    \"role_id\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/employee",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employee"
+							],
+							"query": [
+								{
+									"key": "provider_name",
+									"value": "fran",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employee_name\": \"Collins, Doyle and Lebsack\",\r\n    \"phone\": \"687-808-4172 x9176\",\r\n    \"role_id\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/employee/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employee",
+								":id"
+							],
+							"query": [
+								{
+									"key": "provider_name",
+									"value": "fran",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicle",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/vehicle",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"vehicle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "options",
+					"request": {
+						"method": "OPTIONS",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/vehicle",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"vehicle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/vehicle/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"vehicle",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\": \"Vehiculo 1\",\r\n    \"patent\": \"ABC103\",\r\n    \"vin\": null,\r\n    \"vehicle_type_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/vehicle",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"vehicle"
+							],
+							"query": [
+								{
+									"key": "provider_name",
+									"value": "fran",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\": \"Vehiculo 1\",\r\n    \"patent\": \"ABC103\",\r\n    \"vin\": null,\r\n    \"vehicle_type_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/vehicle/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"vehicle",
+								":id"
+							],
+							"query": [
+								{
+									"key": "provider_name",
+									"value": "fran",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicle Type",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/vehicletype",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"vehicletype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "options",
+					"request": {
+						"method": "OPTIONS",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/vehicletype",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"vehicletype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/vehicletype/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"vehicletype",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Camioneta\",\r\n    \"brand\": \"Ford\",\r\n    \"vmodel\": \"Ecosport\",\r\n    \"capacity\": 20,\r\n    \"co_km\": 20,\r\n    \"liter_km\": 1,\r\n    \"oil_capacity\": 1000,\r\n    \"unit_capacity_category_id\": 24,\r\n    \"vehicle_category_id\": 26,\r\n    \"load_side_category_id\": 17\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/vehicletype",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"vehicletype"
+							],
+							"query": [
+								{
+									"key": "provider_name",
+									"value": "fran",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Camioneta\",\r\n    \"brand\": \"Ford\",\r\n    \"vmodel\": \"Ecosport\",\r\n    \"capacity\": 20,\r\n    \"co_km\": 20,\r\n    \"liter_km\": 1,\r\n    \"oil_capacity\": 1000,\r\n    \"unit_capacity_category_id\": 24,\r\n    \"vehicle_category_id\": 26,\r\n    \"load_side_category_id\": 17\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/vehicletype/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"vehicletype",
+								":id"
+							],
+							"query": [
+								{
+									"key": "provider_name",
+									"value": "fran",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Planning",
+			"item": [
+				{
+					"name": "Routeplans",
+					"item": [
+						{
+							"name": "routeplans - index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/routeplan",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"routeplan"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "routeplans - store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "routeplans - show",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Response time is less than 200ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/routeplan/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"routeplan",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sitesplan",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Response time is less than 200ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/sitesplan/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sitesplan",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "routeplans - update",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "routeplans - options",
+							"request": {
+								"method": "OPTIONS",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/routeplan",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"routeplan"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Routes",
+					"item": [
+						{
+							"name": "routes - index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/route",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"route"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "routes - show",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Response time is less than 200ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/route/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"route",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sitesroute",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Response time is less than 200ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/sitesroute/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sitesroute",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "routes - store",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"pepe\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/route",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"route"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "routes - update",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "routes - options",
+							"request": {
+								"method": "OPTIONS",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/route",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"route"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Routing",
+			"item": [
+				{
+					"name": "routing",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"locations\":[\r\n       {\"lat\": -37.45929, \"lng\": -61.94113},\r\n       {\"lat\": -37.45956, \"lng\": -61.93586},\r\n       {\"lat\": -37.44967, \"lng\": -61.92965},\r\n       {\"lat\": -37.45460, \"lng\": -61.93083},       \r\n       {\"lat\": -37.45814, \"lng\": -61.90713},\r\n       {\"lat\": -37.45122, \"lng\": -61.93920},\r\n       {\"lat\": -37.446629, \"lng\": -61.9295159},\r\n       {\"lat\": -37.4588246, \"lng\": -61.9229168},\r\n       {\"lat\": -37.4520793, \"lng\": -61.9480652},\r\n       {\"lat\": -37.4629464, \"lng\": -61.9497389},\r\n       {\"lat\": -37.4629124, \"lng\": -61.9311995},\r\n       {\"lat\": -37.4512275, \"lng\": -61.9219727},\r\n       {\"lat\": -37.4572916, \"lng\": -61.948151},\r\n       {\"lat\": -37.4642409, \"lng\": -61.9413704},\r\n       {\"lat\": -37.4617883, \"lng\": -61.9244618},\r\n       {\"lat\": -37.4545322, \"lng\": -61.9239468},\r\n       {\"lat\": -37.4586543, \"lng\": -61.915707}\r\n   ],\r\n   \"demands\":[\r\n      2,\r\n      2,\r\n      2,\r\n      2,\r\n      0,\r\n      2,\r\n      2,\r\n      2,\r\n      2,\r\n      0,\r\n      2,\r\n      2,\r\n      2,\r\n      2,\r\n      2,\r\n      2,\r\n      2\r\n   ],\r\n   \"vehicleCapacities\":[\r\n      8,\r\n      6,\r\n      12,\r\n      10\r\n   ],\r\n   \"vehicleNumber\":4,\r\n   \"starts\": [\r\n       9,\r\n       9,\r\n       9,\r\n       9\r\n   ],\r\n   \"ends\": [\r\n       4,\r\n       4,\r\n       4,\r\n       4\r\n   ],\r\n   \"allowDropping\" : true,\r\n   \"seconds\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/routing",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"routing"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://wm-backend.herokuapp.com/api/routing",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJhNjdhZmFkYjA2NDY0NGViODIyMGRjZGFhM2VkNzY0ZWYzMjAwMzRjN2Y4NzkxNzc5NDEwYTVlMTJhYzA4OWFmNTM4N2I1MWQ0MDU4MmY2In0.eyJhdWQiOiIxIiwianRpIjoiMmE2N2FmYWRiMDY0NjQ0ZWI4MjIwZGNkYWEzZWQ3NjRlZjMyMDAzNGM3Zjg3OTE3Nzk0MTBhNWUxMmFjMDg5YWY1Mzg3YjUxZDQwNTgyZjYiLCJpYXQiOjE2NDQ0Mjk4ODgsIm5iZiI6MTY0NDQyOTg4OCwiZXhwIjoxNjc1OTY1ODg4LCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.swNJ9lA2YzgM77DGSBvjbQEZVsXQTNtBDNBNG5C368boulvvUMQEzXysGn2DSUDS8gVATMefFLk0xxq7Ht7eCSaHPLBNQlVFF35WowGjUUSDErdeXpXVj_V77Et84D0eHfgFVpzv5d5xSVpi2B36bKxP59dDxXZLTw0ZT15-CvukCQO2QdOTojGGoA4RDTyt5yls_KwpzBjwUeN4Lz-zRCvWpNU9OmpQm5ovJtqfqDz_2aBxm1qZPnrWxhp2tWsKRqJdt2kUuduU9npSTBrhs-TTlbLwQqQ1Ez51x-TbFFFZwZrdjHLrdYttQ3CQzzLBI3YM5yKmxodnBYxRkFhf7v0uY_iIFcf09SNj6Vll97NZdFZiS7gbJttJEvybjFFTbfmX-uxUvInRB_wS-r2FLd9kiGlm4XfhEe2rsNzWDI3rWmoAm0pIGThifZT9NMLA1T6Qj-F77LzlxWKxbWebhsz6Z1Kd9W2IC2f0c1EpvMTogf686ekgeRvjYNLdzQJQzt7iAKWBXApq0OMrnOSibIsUf4aPmoqsC5-LL4X8-raceNe7H2OF-nQBY8DWHfv154XWwRG3eRDjW0GoSSkyZOfejIlURuGuz9nFw1VDCLLQ0V9ZbWrbnqFZAqr3PE8PyiJhzrFHlh32V14MdCcIEgA7TMLvju91c7O2UWAHACg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"locations\":[\r\n       {\"lat\": -37.45929, \"lng\": -61.94113},\r\n       {\"lat\": -37.45956, \"lng\": -61.93586},\r\n       {\"lat\": -37.44967, \"lng\": -61.92965},\r\n       {\"lat\": -37.45460, \"lng\": -61.93083},       \r\n       {\"lat\": -37.45814, \"lng\": -61.90713},\r\n       {\"lat\": -37.45122, \"lng\": -61.93920},\r\n       {\"lat\": -37.446629, \"lng\": -61.9295159},\r\n       {\"lat\": -37.4588246, \"lng\": -61.9229168},\r\n       {\"lat\": -37.4520793, \"lng\": -61.9480652},\r\n       {\"lat\": -37.4629464, \"lng\": -61.9497389},\r\n       {\"lat\": -37.4629124, \"lng\": -61.9311995},\r\n       {\"lat\": -37.4512275, \"lng\": -61.9219727},\r\n       {\"lat\": -37.4572916, \"lng\": -61.948151},\r\n       {\"lat\": -37.4642409, \"lng\": -61.9413704},\r\n       {\"lat\": -37.4617883, \"lng\": -61.9244618},\r\n       {\"lat\": -37.4545322, \"lng\": -61.9239468},\r\n       {\"lat\": -37.4586543, \"lng\": -61.915707}\r\n   ],\r\n   \"demands\":[\r\n      2,\r\n      2,\r\n      2,\r\n      2,\r\n      0,\r\n      2,\r\n      2,\r\n      2,\r\n      2,\r\n      0,\r\n      2,\r\n      2,\r\n      2,\r\n      2,\r\n      2,\r\n      2,\r\n      2\r\n   ],\r\n   \"vehicleCapacities\":[\r\n      8,\r\n      6,\r\n      12,\r\n      10\r\n   ],\r\n   \"vehicleNumber\":4,\r\n   \"starts\": [\r\n       9,\r\n       9,\r\n       9,\r\n       9\r\n   ],\r\n   \"ends\": [\r\n       4,\r\n       4,\r\n       4,\r\n       4\r\n   ],\r\n   \"allowDropping\" : true,\r\n   \"seconds\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://wm-backend.herokuapp.com/api/routing",
+							"protocol": "https",
+							"host": [
+								"wm-backend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"routing"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "menu",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/menu",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"menu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"rath.nicolas@example.org\",\r\n    \"password\":\"secret\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/logout",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjkwYmQwZTA4ODEwZDk0YWI0MzhmMTJhYzU3ZTMwZDE3NzNmNTA0MGMxMmViOTA1MjhmNTNhMWYwNWRlOGYyODVlOWJiODdkMDUwODE0MzBiIn0.eyJhdWQiOiIxIiwianRpIjoiOTBiZDBlMDg4MTBkOTRhYjQzOGYxMmFjNTdlMzBkMTc3M2Y1MDQwYzEyZWI5MDUyOGY1M2ExZjA1ZGU4ZjI4NWU5YmI4N2QwNTA4MTQzMGIiLCJpYXQiOjE2NTE2MjU5NzAsIm5iZiI6MTY1MTYyNTk3MCwiZXhwIjoxNjgzMTYxOTcwLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.Tx_Zi6xnb8j9AmMX-_4nyG1eiATrMV1_Q7qUeC_96iJTjW0U82cSrb1X-25gcyR3kFt8rOiBBbHxHRY0pOT-tOQ4ixiCwyK-0OdnJAtvqf2z5j6baV04SnFcJ4-4jQ_VKuF23TCaAGTyAkiaNuA6M_-orWlZXQyRT19P-JeDXo6W2l5Y-eQOs48YcKilf-akVlQRadgBfHULBrjjwJDObsyRB2GtvQPw6MFzz0sQzH2tIbykYVJ1jbZkqogQ-EzDGhGGTbwzxnqM2Zd5q7koole0B4fgEFaVelGnTNzljUCRhXGxmLTcr7TYC43dTI41wo2HQwVXPtvJPrFsitlx0WojiSGgfiUPV0sYHrWB9RmYIIgzubGjmYCHeKa_2nwbyMs7wx6W0jNn_fYKJfylS-64D-dRCWKAGqxumur2sMakOFe6yVQi8B1DG354XsppO9ZUwuOchaXL6wimeLHz6zcXimlbNz5QzfBgCJf5f5HI7JZUkDGiRz-4CLQgliOGn3ToLtb4ao1egjMiWeCB_kUsV6zkSCD9q6KlFXXa6XpntZPOJVAO8ljvj19J4W_meJGEWELm5OrshiSwDiHvwd8LW61qu55lPBAq2qhykT9mA-CeNwi4knjJhjQzcj8cP5GZ4ZN0kXCyGWhcM6DjIF67KkEPzMQ1dNzu7efgpiw",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://wm-backend.herokuapp.com/api",
+			"type": "string"
+		},
+		{
+			"key": "alliansys",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImI5OWVjYmQ1NzgzMzVkYjcxNGM5MjdiOGNmZTIzMDBiYmQwNDA1ZGEzMTdhNDEyYjgyM2M5OGUzOWM3MzEyMmE5ODA1NzgzNWMzMzBiNjlmIn0.eyJhdWQiOiIxIiwianRpIjoiYjk5ZWNiZDU3ODMzNWRiNzE0YzkyN2I4Y2ZlMjMwMGJiZDA0MDVkYTMxN2E0MTJiODIzYzk4ZTM5YzczMTIyYTk4MDU3ODM1YzMzMGI2OWYiLCJpYXQiOjE2NDE1MDY3NzIsIm5iZiI6MTY0MTUwNjc3MiwiZXhwIjoxNjczMDQyNzcyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.QJo1pjWzRXhfMl_ttnTDS4rMrUXrHOtKFsgz7QW0g-TahwB8NlZBRYpza9QKeYjcWyeAkjEmQN4AjnpJRHuCoFvkPOLqFMLgwx9gNSdba-jNgx3jOVRUdZStd-uBnR6atShTNxyViVl5z58O3jCGtUEkQMpdZtdVFL2Y-OY9F0G1dBluQdPnGklsyDfISbrUpwtd08bJ07hsg_gpr2cwbK1X6T4UEdRTi7SygQiiN8Sl2nZj1Ybs8SoSEx8_9FvTOMbz4ZJExL3phdjhCxMKadUrv0KbyyjQrv5fLL-5ddRU6nYdJdouEpWYAPHGSo-VKrerS2gf3LTSzQFjpPFWuoiT3zOILC8wD-b27WmfRL0hWu-8okwZA1nNwjxRpMdn4wnLHzgPhyAj1gmAYZFVG7Frx2xSAZJeXjc4VpF65UR31tdNO6Yfn9axm5n4pGlLV3jSSUUbHDH9YZd2QjWfzz0_SG6SmdnXxogaCBnDyNPOYA5TQ9Z5HcMP9vKusy9tLA-hF-hnUb5Nt7JA1e_zNOxHYwPWip0nz8J8bjDd_bsIDhzPKV2co11z9YezVCRYufOSl5kuajvZrP0HTmMz8qu841D3B2F8zkD6nNT5gih2zdeAu6ToL7v7lJZg7hmB-jBS7MHZvp8LH3JYwaxyDE6RVl4y0g05YQsXr0oJszY",
+			"type": "string"
+		},
+		{
+			"key": "client",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjkwYmQwZTA4ODEwZDk0YWI0MzhmMTJhYzU3ZTMwZDE3NzNmNTA0MGMxMmViOTA1MjhmNTNhMWYwNWRlOGYyODVlOWJiODdkMDUwODE0MzBiIn0.eyJhdWQiOiIxIiwianRpIjoiOTBiZDBlMDg4MTBkOTRhYjQzOGYxMmFjNTdlMzBkMTc3M2Y1MDQwYzEyZWI5MDUyOGY1M2ExZjA1ZGU4ZjI4NWU5YmI4N2QwNTA4MTQzMGIiLCJpYXQiOjE2NTE2MjU5NzAsIm5iZiI6MTY1MTYyNTk3MCwiZXhwIjoxNjgzMTYxOTcwLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.Tx_Zi6xnb8j9AmMX-_4nyG1eiATrMV1_Q7qUeC_96iJTjW0U82cSrb1X-25gcyR3kFt8rOiBBbHxHRY0pOT-tOQ4ixiCwyK-0OdnJAtvqf2z5j6baV04SnFcJ4-4jQ_VKuF23TCaAGTyAkiaNuA6M_-orWlZXQyRT19P-JeDXo6W2l5Y-eQOs48YcKilf-akVlQRadgBfHULBrjjwJDObsyRB2GtvQPw6MFzz0sQzH2tIbykYVJ1jbZkqogQ-EzDGhGGTbwzxnqM2Zd5q7koole0B4fgEFaVelGnTNzljUCRhXGxmLTcr7TYC43dTI41wo2HQwVXPtvJPrFsitlx0WojiSGgfiUPV0sYHrWB9RmYIIgzubGjmYCHeKa_2nwbyMs7wx6W0jNn_fYKJfylS-64D-dRCWKAGqxumur2sMakOFe6yVQi8B1DG354XsppO9ZUwuOchaXL6wimeLHz6zcXimlbNz5QzfBgCJf5f5HI7JZUkDGiRz-4CLQgliOGn3ToLtb4ao1egjMiWeCB_kUsV6zkSCD9q6KlFXXa6XpntZPOJVAO8ljvj19J4W_meJGEWELm5OrshiSwDiHvwd8LW61qu55lPBAq2qhykT9mA-CeNwi4knjJhjQzcj8cP5GZ4ZN0kXCyGWhcM6DjIF67KkEPzMQ1dNzu7efgpiw",
+			"type": "string"
+		},
+		{
+			"key": "provider",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjY1YWIyZWUwNzI5MGU3MmEwZDc2ZDk1MWQ5YjNiZmUzNWU3MmE5NjU4Zjg1ODhjNWU5ZjZlMDMzYjgzNjI4ZDM4MTUxMzA2MjJlMzNkN2YxIn0.eyJhdWQiOiIxIiwianRpIjoiNjVhYjJlZTA3MjkwZTcyYTBkNzZkOTUxZDliM2JmZTM1ZTcyYTk2NThmODU4OGM1ZTlmNmUwMzNiODM2MjhkMzgxNTEzMDYyMmUzM2Q3ZjEiLCJpYXQiOjE2NDE1MDY4NDgsIm5iZiI6MTY0MTUwNjg0OCwiZXhwIjoxNjczMDQyODQ4LCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.mdSIB7uHo5-AEaKMquBgwH9jMUvZi21hYCjdz4HEJ-KbJ0rlyS_uyfy7g58N7ipHzzKaqW0nisp0COCsJrmBSLapE6hdoHH9xCQWvA2hkXpCddOFOT2hC1WcBAAH2mqydtrlfjFCYkrBlWcKoa9jgJ_0cfNlIg4pFixjvV6EkqETfgQzGoeByO0MvC5992I3sE52F7eoF4ZoGxqiC3_lXI6PyWVhfKw4F1z48qvU3B7mwsKl4y55kcYAfQ5BQTv0iRqLt2qcrHZu5VVEysBtzpf5i91BkyDAfxBXcs9K-vjCYJBW46e3x3Jes-Ho9pD2vg5deTJai8zUwPhId2NHYGOdhv2jylnaRURTvVSwia-vqVH8xycmnhHGr6fiQteH8BXeF1u9oslEOC4zCRLJdw6SgEEPIIuxhclw8wgPCOLHejLFfslMKtVLbPgiyzm-5ZcBKP1wKZljl0IbnDLmCJJV5AMlNSIazXgVHjs2xSThEJcwJ-JOYJovO8uPm58iGUWil2GYQ75BYRvDDVhkABFKEK_9Xs-vqwYv-X3HGctHJDvGst3JVamY63VjAtGgfY2diYm_HMEGZujBstkqKq1beKi7Ub-NpuWVOg4ACqNLAx0LMY2DybQG-t6i2BlJeVeI5cq-N0oDGXdx0cg1lMcHpsO-cc7e5U1o4KSN_UM",
+			"type": "string"
+		}
+	]
+}
